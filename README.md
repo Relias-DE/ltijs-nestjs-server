@@ -1,4 +1,4 @@
-## URLs to be shared with the customer, or to be set in Customer LMS
+## URLs to be shared with the LMS, or to be set in Customer LMS
 
 - LTI v1.3 needs to be setup with the customer, following
 
