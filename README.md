@@ -2,15 +2,15 @@
 
 - LTI v1.3 needs to be setup with the customer, following
 
-| Urls/Env           | DEV                                                              | Staging                                                      | PROD                                                 |
-| ------------------ | ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
-| Platform URL       | https://relias-ltiv1p3-api.development.hallopflege.net           | https://relias-ltiv1p3-api.staging.hallopflege.net           | https://relias-ltiv1p3-api.pflegeclever.de           |
-| Initiate Login URL | https://relias-ltiv1p3-api.development.hallopflege.net/lti/login | https://relias-ltiv1p3-api.staging.hallopflege.net/lti/login | https://relias-ltiv1p3-api.pflegeclever.de/lti/login |
-| Keyset URL         | https://relias-ltiv1p3-api.development.hallopflege.net/lti/keys  | https://relias-ltiv1p3-api.staging.hallopflege.net/lti/keys  | https://relias-ltiv1p3-api.pflegeclever.de/lti/keys  |
-| Tool URL           | https://relias-ltiv1p3-api.development.hallopflege.net/lti/      | https://relias-ltiv1p3-api.staging.hallopflege.net/lti/      | https://relias-ltiv1p3-api.pflegeclever.de/lti/      |
-| Redirect URL       | https://relias-ltiv1p3-api.development.hallopflege.net/lti/      | https://relias-ltiv1p3-api.staging.hallopflege.net/lti/      | https://relias-ltiv1p3-api.pflegeclever.de/lti/      |
-| Deeplinking URL    | https://relias-ltiv1p3-api.development.hallopflege.net/lti/      | https://relias-ltiv1p3-api.staging.hallopflege.net/lti/      | https://relias-ltiv1p3-api.pflegeclever.de/lti/      |
-| Ping URL           | https://relias-ltiv1p3-api.development.hallopflege.net/lti/ping  | https://relias-ltiv1p3-api.staging.hallopflege.net/lti/ping  | https://relias-ltiv1p3-api.pflegeclever.de/lti/ping  |
+| Urls/Env           | DEV                                       |
+| ------------------ | ----------------------------------------- |
+| Platform URL       | https://random.ngrok.domain.com           |
+| Initiate Login URL | https://random.ngrok.domain.com/lti/login |
+| Keyset URL         | https://random.ngrok.domain.com/lti/keys  |
+| Tool URL           | https://random.ngrok.domain.com/lti/      |
+| Redirect URL       | https://random.ngrok.domain.com/lti/      |
+| Deeplinking URL    | https://random.ngrok.domain.com/lti/      |
+| Ping URL           | https://random.ngrok.domain.com/lti/ping  |
 
 ## When creating/deleting platforms
 
@@ -33,5 +33,3 @@
 - When configuring LTIv1.3 in customer LMS please keep Tool URL (this may be called something else like `Login URL` as well like in the case for ilias) , Redirect URL and Deeplinking URL same
 - `LTI_KEY` please do not change this env variable once decided for any env..if you do change this midst during dev or due to any other reason on any env., ..then the `lti-platforms` db needs to be dropped and re-created and re-register all the platforms,
   ohtherwise this will cause the `/keys` url to fail and give bad_decrypt exception
-
----Need to test DEV with register, de-register (both with token)- mod the env vars if need be, launch, courses etc and then handover to Ivan
